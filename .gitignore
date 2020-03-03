@@ -1,0 +1,4 @@
+node_modules/
+package*
+tailwind.config.js
+styles.css
