@@ -47,6 +47,14 @@ var scroll = true;
 var div = 1;
 
 if($(window).width() >= 960){
+  // Reset position onload
+  $('document').ready(() => {
+    div = 1
+    $('html,body').animate({
+      scrollTop: divs.eq(div).offset().top
+    }, 1000);
+  });
+
   $('body').bind('wheel', function(e) {
     //console.log("berhasil");
     if (scroll == true){
@@ -77,3 +85,7 @@ if($(window).width() >= 960){
 $('body').bind('touchmove', function(e){
   e.preventDefault();
 });
+
+$('.sidebar__open').click(() => {
+  $('#sidebar__toggle').toggleClass('sidebar__body--show'); 
+})

@@ -28,14 +28,6 @@ a:focus {
   background-color: #3aa9af;
 }
 
-.btn-scroll {
-  padding: 15px 40px;
-}
-
-.btn-contact {
-  font-weight: bold;
-}
-
 /* 
 |-------------------------------
 |Navbar Css
@@ -64,6 +56,15 @@ a:focus {
   color: #ffffff;
 }
 
+.navbar__home {
+  display: flex;
+}
+
+.navbar__img {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
 .navbar__item {
   margin-right: 1rem;
 }
@@ -72,13 +73,40 @@ a:focus {
   display: none;
 }
 
-.sidebar__button {
+.sidebar__body {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  left: -960px;
+  transition: left 1s;
+}
+
+.sidebar__body--show {
+  left: 0;
+}
+
+.sidebar__item {
+  display: block;
+  padding: 1.5rem;
+}
+
+.sidebar__open,
+.sidebar__close {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  padding: 1rem;
-  color: white;
-  background: #000;
+}
+
+.sidebar__close {
+  z-index: -1;
+}
+
+.sidebar__img {
+  width: 3rem;
 }
 
 /* 
@@ -210,6 +238,7 @@ a:focus {
     auto-fill,
     minmax(var(--auto-grid-min-size), 1fr)
   );
+  background-color: #def5f6;
 }
 
 .section-4__item,
