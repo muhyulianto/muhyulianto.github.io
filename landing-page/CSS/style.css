@@ -30,7 +30,7 @@ a:focus {
 
 /* 
 |-------------------------------
-|Navbar Css
+|Navbar & Sidebar Css
 |-------------------------------
 */
 .navbar {
@@ -79,10 +79,13 @@ a:focus {
   width: 100%;
   z-index: 1;
   height: 100vh;
-  display: flex;
-  justify-content: center;
   left: -960px;
   transition: left 1s;
+}
+
+.sidebar__menu {
+  position: absolute;
+  bottom: 0;
 }
 
 .sidebar__body--show {
@@ -92,17 +95,19 @@ a:focus {
 .sidebar__item {
   display: block;
   padding: 1.5rem;
+  color: #001628;
 }
 
-.sidebar__open,
-.sidebar__close {
+.sidebar__open {
   position: fixed;
-  top: 1rem;
+  bottom: 1rem;
   right: 1rem;
 }
 
 .sidebar__close {
-  z-index: -1;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .sidebar__img {
@@ -295,6 +300,9 @@ a:focus {
   }
   .section-2__img {
     display: none;
+  }
+  .section-3 {
+    padding: 1rem;
   }
   .section-4__body div:nth-of-type(3) {
     order: 4;

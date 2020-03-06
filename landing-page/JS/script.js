@@ -86,6 +86,13 @@ $('body').bind('touchmove', function(e){
   e.preventDefault();
 });
 
-$('.sidebar__open').click(() => {
+$('.sidebar__open').click((e) => {
+  e.preventDefault();
+  $('#sidebar__toggle').toggleClass('sidebar__body--show'); 
+});
+
+
+$('.sidebar__close').click((e) => {
+  e.preventDefault();
   $('#sidebar__toggle').toggleClass('sidebar__body--show'); 
 })
