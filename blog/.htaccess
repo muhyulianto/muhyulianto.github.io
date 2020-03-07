@@ -11,7 +11,7 @@ RewriteRule ^$ /_site/ [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^/_site/
-RewriteRule ^(.*)$ /_site/$1
+RewriteRule ^(.*)$ blog/_site/
 
 # Add trailing slash to directories within jekyll
 # This does not expose the internal URL.
