@@ -5,7 +5,7 @@ RewriteBase /
 
 #this assumes you compiled your site to "/_site"
 #Map http://www.example.com to /_site.
-RewriteRule ^$ /_site/ [L]
+RewriteRule ^$ /blog/_site/ [L]
 
 #Map http://www.example.com/x to /_site/x unless there is a x in the web root.
 RewriteCond %{REQUEST_FILENAME} !-f
