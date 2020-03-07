@@ -1,0 +1,13 @@
+# BEGIN Jekyll redirect
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+#Map http://www.example.com/x to /_site/x unless there is a x in the web root.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/_site/
+RewriteRule ^(.*)$ $1_site/
+
+</IfModule>
+# END Jekyll redirect
