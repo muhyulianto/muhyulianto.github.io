@@ -5,7 +5,7 @@ RewriteBase /
 
 #this assumes you compiled your site to "/_site"
 #Map http://www.example.com to /_site.
-RewriteRule ^$ /blog/_site/ [L]
+RewriteRule ^$ /_site/ [L]
 
 #Map http://www.example.com/x to /_site/x unless there is a x in the web root.
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -16,6 +16,6 @@ RewriteRule ^(.*)$ /_site/$1
 # Add trailing slash to directories within jekyll
 # This does not expose the internal URL.
 RewriteCond %{SCRIPT_FILENAME} -d
-RewriteRule ^_site/(.*[^/])$ http://blog.niklas-heer.de/$1/ [R=301]
+RewriteRule ^_site/(.*[^/])$ http://muhyulianto.github.io/$1/ [R=301]
 </IfModule>
 # END Jekyll redirect
