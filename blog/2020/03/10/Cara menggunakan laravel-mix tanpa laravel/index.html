@@ -24,7 +24,7 @@
     <a href="/blog/"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
     <div class="post-title">
         <p>
-            Using Laravel Mix Without Laravel
+            Cara menggunakan laravel-mix tanpa laravel
         </p>
         <hr>
     </div>
@@ -33,14 +33,14 @@
 <h2 id="Mengatur-project-anda"><a href="#Mengatur-project-anda" class="headerlink" title="Mengatur project anda"></a>Mengatur project anda</h2><p>Mari ambil contoh semisal kita memulai project dari nol, kita harus menginisialisasi direktori npm kita dengan cara</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure>
 
-<h2 id="Install-laravel-mix"><a href="#Install-laravel-mix" class="headerlink" title="Install laravel mix"></a>Install laravel mix</h2><p>Selanjutnya, kita harus menginstall node packages berikut ini: <code>laravel-mix</code>, <code>webpack</code> dan <code>cross-env</code>.</p>
+<h2 id="Install-laravel-mix"><a href="#Install-laravel-mix" class="headerlink" title="Install laravel mix"></a>Install laravel mix</h2><p>Selanjutnya, kita harus menginstall node packages berikut ini: <code>laravel-mix</code>, <code>webpack</code> dan <code>cross-env</code> dengan cara.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install laravel-mix cross-env</span><br></pre></td></tr></table></figure>
 
 <p>Proses ini membutuhkan waktu beberapa saat untuk menginstall dan men-compile semua dependensi yang diperlukan.</p>
 <h2 id="Buat-file-webpack-mix-js"><a href="#Buat-file-webpack-mix-js" class="headerlink" title="Buat file webpack.mix.js"></a>Buat file <code>webpack.mix.js</code></h2><p>Selanjutnya, buat file <code>webpack.mix.js</code> dan paste code dibawah ini di dalamnya:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let mix &#x3D; require(&#39;laravel-mix&#39;);</span><br><span class="line"></span><br><span class="line">mix.sass(&#39;assets&#x2F;style.scss&#39;, &#39;dist&#39;)</span><br><span class="line">   .js(&#39;assets&#x2F;app.js&#39;, &#39;dist&#39;);</span><br></pre></td></tr></table></figure>
 
-<p>Code tersebut akan men-compile asset SCSS (style.scss) ke format CSS (style.css)<br>dan menaruhnya didalam folder <code>dist</code>, sama halnya dengan dile javascript.</p>
+<p>Code tersebut akan men-compile asset SCSS (style.scss) ke format CSS (style.css)<br>dan menaruhnya didalam folder <code>dist</code>, sama halnya dengan file javascript.</p>
 <h2 id="Menambahkan-perintah-npm-ke-dalam-file-packages-json"><a href="#Menambahkan-perintah-npm-ke-dalam-file-packages-json" class="headerlink" title="Menambahkan perintah npm ke dalam file packages.json"></a>Menambahkan perintah <code>npm</code> ke dalam file <code>packages.json</code></h2><p>Taruh kode dibawah ini di dalam file <code>packages.json</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">	&quot;dev&quot;: &quot;npm run development&quot;,</span><br><span class="line">	&quot;development&quot;: &quot;cross-env NODE_ENV&#x3D;development node_modules&#x2F;webpack&#x2F;bin&#x2F;webpack.js --progress --hide-modules --config&#x3D;node_modules&#x2F;laravel-mix&#x2F;setup&#x2F;webpack.config.js&quot;,</span><br><span class="line">	&quot;watch&quot;: &quot;cross-env NODE_ENV&#x3D;development node_modules&#x2F;webpack&#x2F;bin&#x2F;webpack.js --watch --progress --hide-modules --config&#x3D;node_modules&#x2F;laravel-mix&#x2F;setup&#x2F;webpack.config.js&quot;,</span><br><span class="line">	&quot;watch-poll&quot;: &quot;npm run watch -- --watch-poll&quot;,</span><br><span class="line">	&quot;hot&quot;: &quot;cross-env NODE_ENV&#x3D;development node_modules&#x2F;webpack-dev-server&#x2F;bin&#x2F;webpack-dev-server.js --inline --hot --config&#x3D;node_modules&#x2F;laravel-mix&#x2F;setup&#x2F;webpack.config.js&quot;,</span><br><span class="line">	&quot;prod&quot;: &quot;npm run production&quot;,</span><br><span class="line">	&quot;production&quot;: &quot;cross-env NODE_ENV&#x3D;production node_modules&#x2F;webpack&#x2F;bin&#x2F;webpack.js --no-progress --hide-modules --config&#x3D;node_modules&#x2F;laravel-mix&#x2F;setup&#x2F;webpack.config.js&quot;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
