@@ -393,35 +393,51 @@ video {
 }
 
 .bg-black {
+  --bg-opacity: 1;
   background-color: #000;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
 }
 
 .bg-white {
+  --bg-opacity: 1;
   background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
 }
 
 .bg-gray-100 {
+  --bg-opacity: 1;
   background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
 }
 
 .bg-gray-200 {
+  --bg-opacity: 1;
   background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
 }
 
 .bg-gray-500 {
+  --bg-opacity: 1;
   background-color: #a0aec0;
+  background-color: rgba(160, 174, 192, var(--bg-opacity));
 }
 
 .bg-yellow-500 {
+  --bg-opacity: 1;
   background-color: #ecc94b;
+  background-color: rgba(236, 201, 75, var(--bg-opacity));
 }
 
 .hover\:bg-black:hover {
+  --bg-opacity: 1;
   background-color: #000;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
 }
 
 .border-black {
+  --border-opacity: 1;
   border-color: #000;
+  border-color: rgba(0, 0, 0, var(--border-opacity));
 }
 
 .rounded {
@@ -502,6 +518,34 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+}
+
+.text-6xl {
+  font-size: 4rem;
 }
 
 .m-2 {
@@ -650,55 +694,43 @@ video {
 }
 
 .text-black {
+  --text-opacity: 1;
   color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
 }
 
 .text-white {
+  --text-opacity: 1;
   color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
 }
 
 .text-gray-600 {
+  --text-opacity: 1;
   color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
 }
 
 .text-gray-700 {
+  --text-opacity: 1;
   color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
 }
 
 .text-gray-800 {
+  --text-opacity: 1;
   color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity));
 }
 
 .hover\:text-white:hover {
+  --text-opacity: 1;
   color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
 }
 
-.text-xs {
-  font-size: 0.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-}
-
-.text-6xl {
-  font-size: 4rem;
+.uppercase {
+  text-transform: uppercase;
 }
 
 .tracking-tighter {
