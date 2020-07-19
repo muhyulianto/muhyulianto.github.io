@@ -1,0 +1,9 @@
+.bg-corona {
+  background: url("./images/background1.svg") no-repeat -10px -50px;
+}
+
+@media (max-width: 991.98px) {
+  .bg-corona {
+    background: none;
+  }
+}

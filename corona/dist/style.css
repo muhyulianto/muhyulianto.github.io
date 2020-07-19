@@ -11115,10 +11115,6 @@ body {
   background: linear-gradient(135deg, #fefefe 0%, #ffd5d5 100%);
 }
 
-.bg-corona {
-  background: url(../images/background1.svg?f002b25854a080869f7906f7d7a681ac) no-repeat 0 -4rem;
-}
-
 .pointer {
   cursor: pointer;
 }

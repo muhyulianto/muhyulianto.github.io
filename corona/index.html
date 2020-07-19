@@ -4,77 +4,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data corona</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./dist/style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
-    <div class="loading">
-    </div>
+    <div class="loading"></div>
     <div class="container-fluid bg-gradient">
-      <div class="row justify-content-center align-items-center vh-100 bg-corona">
-        <div class="col-lg-6">
-          <div class="font-weight-bold text-danger m-auto w-50" style="font-size: 2rem;">
-            COVID 19
-          </div>
-          <div class="ml-auto text-danger my-3 w-75">
-            Penyakit ini, yang disebabkan oleh novel coronavirus yang pertama kali diidentifikasi di Wuhan, Tiongkok, diberi nama coronavirus disease 2019 (COVID-19) –  'CO' berasal dari corona, 'VI' berasal dari virus, dan 'D' berasal dari disease (penyakit).
-            <div class="text-muted mt-2" style="font-size: 0.75rem;">
-              * Sumber: Unicef.org
+      <div
+        class="row justify-content-center align-items-center min-vh-100 bg-corona"
+      >
+        <div class="col-lg-6 row justify-content-center">
+          <div class="col-sm-8 offset-lg-2">
+            <div
+              class="font-weight-bold text-danger m-auto"
+              style="font-size: 2rem;"
+            >
+              COVID 19
             </div>
-          </div>
-          <div class="m-auto w-50">
-            <a class="btn btn-info" href="https://www.unicef.org/indonesia/id/coronavirus">
-              PELAJARI LEBIH LANJUT
-            </a>
+            <div class="mx-auto text-danger my-3">
+              COVID-19 adalah virus baru yang berasal dari satu keluarga yang
+              sama dengan Severe Acute Respiratory Syndrome (SARS) dan beberapa
+              jenis flu biasa.
+              <div class="text-muted mt-2" style="font-size: 0.75rem;">
+                * Sumber: Unicef.org
+              </div>
+            </div>
+            <div class="m-auto">
+              <a
+                class="btn btn-info"
+                href="https://www.unicef.org/indonesia/id/coronavirus"
+              >
+                PELAJARI LEBIH LANJUT
+              </a>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="swiper-container rounded pointer" style="width: 25rem;">
-            <div class="swiper-wrapper">
-              <div class="card border-0 swiper-slide w-75">
-                <img src="./images/sakit.svg" class="card-img-top p-4" style="height: 10rem;">
-                <div class="card-body">
-                  <div class="card-title font-weight-bold text-warning text-center" style="font-size: 1rem;">
-                    TOTAL POSITIF
+        <div class="col-lg-6 row justify-content-center">
+          <div class="col-sm-8">
+            <div class="swiper-container rounded pointer">
+              <div class="swiper-wrapper">
+                <div class="card border-0 swiper-slide w-75">
+                  <div class="card-body">
+                    <div
+                      class="card-title font-weight-bold text-secondary text-center text-capitalize"
+                      style="font-size: 1rem;"
+                    >
+                      total kasus positif
+                    </div>
+                    <img
+                      src="./images/sakit.svg"
+                      class="card-img-top p-4"
+                      style="height: 10rem;"
+                    />
+                    <div
+                      id="positif"
+                      class="text-warning font-weight-bold text-center"
+                      style="font-size: 2rem;"
+                    ></div>
+                    <div
+                      id="perbedaanDataPositif"
+                      class="text-secondary mt-3"
+                    ></div>
                   </div>
-                  <div id="positif" class="text-warning font-weight-bold text-center" style="font-size: 2rem;">
+                </div>
+                <div class="card border-0 swiper-slide w-75">
+                  <div class="card-body">
+                    <div
+                      class="card-title font-weight-bold text-secondary text-center text-capitalize"
+                      style="font-size: 1rem;"
+                    >
+                      total kasus meninggal
+                    </div>
+                    <img
+                      src="./images/meninggal.svg"
+                      class="card-img-top p-4"
+                      style="height: 10rem;"
+                    />
+                    <div
+                      id="meninggal"
+                      class="text-danger font-weight-bold text-center"
+                      style="font-size: 2rem;"
+                    ></div>
+                    <div
+                      id="perbedaanDataMeninggal"
+                      class="text-secondary mt-3"
+                    ></div>
+                  </div>
+                </div>
+                <div class="card border-0 swiper-slide w-75">
+                  <div class="card-body">
+                    <div
+                      class="card-title font-weight-bold text-secondary text-center text-capitalize"
+                      style="font-size: 1rem;"
+                    >
+                      total kasus sembuh
+                    </div>
+                    <img
+                      src="./images/sembuh.svg"
+                      class="card-img-top p-4"
+                      style="height: 10rem;"
+                    />
+                    <div
+                      id="sembuh"
+                      class="text-success font-weight-bold text-center"
+                      style="font-size: 2rem;"
+                    ></div>
+                    <div
+                      id="perbedaanDataSembuh"
+                      class="text-secondary mt-3"
+                    ></div>
                   </div>
                 </div>
               </div>
-              <div class="card border-0 swiper-slide w-75">
-                <img src="./images/meninggal.svg" class="card-img-top p-4" style="height: 10rem;">
-                <div class="card-body">
-                  <div class="card-title font-weight-bold text-danger text-center" style="font-size: 1rem;">
-                    TOTAL MENINGGAL
-                  </div>
-                  <div id="meninggal" class="text-danger font-weight-bold text-center" style="font-size: 2rem;">
-                  </div>
-                </div>
+              <div class="text-muted mt-3" style="font-size: 0.75rem;">
+                * Geser untuk melihat data lainya
               </div>
-              <div class="card border-0 swiper-slide w-75">
-                <img src="./images/sembuh.svg" class="card-img-top p-4" style="height: 10rem;">
-                <div class="card-body">
-                  <div class="card-title font-weight-bold text-success text-center" style="font-size: 1rem;">
-                    TOTAL SEMBUH
-                  </div>
-                  <div id="sembuh" class="text-success font-weight-bold text-center" style="font-size: 2rem;">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-muted mt-3" style="font-size: 0.75rem;">
-              * Geser untuk melihat data lainya
             </div>
           </div>
         </div>
       </div>
     </div>
     <script src="./dist/app.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./main.js" module></script>
     <!-- Initialize Swiper -->
-    <script>
-    </script>
+    <script></script>
   </body>
-</html>
 </html>
